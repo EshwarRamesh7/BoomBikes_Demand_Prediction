@@ -1,4 +1,4 @@
-[Untitled3.ipynb](https://github.com/user-attachments/files/23291756/Untitled3.ipynb)[Presentation.pdf](https://github.com/user-attachments/files/23291703/Presentation.pdf)# BoomBikes_Demand_Prediction
+
 Multiple Linear Regression model to predict bike rental demand for BoomBikes using Python. Includes data cleaning, EDA, feature analysis, and model interpretation.
 # 🚴‍♂️ BoomBikes Demand Prediction — Multiple Linear Regression
 
@@ -63,8 +63,8 @@ The dataset (`day.csv`) contains daily records of bike rentals with 16 features,
 
 
 ## 📁 Project Structure
-[Presentation.pdf](https://github.com/user-attachments/files/23291717/Presentation.pdf)
-[Untitled3.ipynb](https://github.com/user-attachments/files/23291719/Untitled3.ipynb)
+-[Presentation.pdf](https://github.com/user-attachments/files/23291717/Presentation.pdf)
+-[Untitled3.ipynb](https://github.com/user-attachments/files/23291719/Untitled3.ipynb)
 
 
 
