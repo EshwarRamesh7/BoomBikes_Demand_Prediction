@@ -1,79 +1,48 @@
+# BoomBikes — Bike Rental Demand Modelling
 
-Multiple Linear Regression model to predict bike rental demand for BoomBikes using Python. Includes data cleaning, EDA, feature analysis, and model interpretation.
-# 🚴‍♂️ BoomBikes Demand Prediction — Multiple Linear Regression
+A regression case study exploring the factors associated with daily bike rental demand and how they can support operational planning.
 
-## 📄 Project Overview
-This project explores factors influencing daily bike demand for **BoomBikes**, a US-based bike-sharing service.  
-The goal is to analyze how environmental and seasonal variables affect total rentals and to build a **Multiple Linear Regression** model to predict future demand.
+**Tools:** Python · Pandas · NumPy · scikit-learn · statsmodels · Matplotlib · Seaborn
 
----
+## Business question
 
-## 🎯 Objective
-- Identify key variables influencing daily bike rentals.  
-- Build a regression model to estimate total demand (`cnt`) using available features.  
-- Provide insights to guide business decisions post-pandemic.
+How do seasonal, calendar and weather conditions relate to daily bike rentals, and how can a demand model support fleet and capacity planning?
 
----
+## Dataset
 
-## 🧩 Dataset Description
-The dataset (`day.csv`) contains daily records of bike rentals with 16 features, including:
+The project summary describes 730 daily observations and 16 columns. Fields include date, season, year, month, weekday, weather situation, temperature, feels-like temperature, humidity, wind speed, casual rentals, registered rentals and total rentals (`cnt`).
 
-- **Date and Season Information:** `dteday`, `season`, `yr`, `mnth`, `weekday`  
-- **Weather Conditions:** `weathersit`, `temp`, `atemp`, `hum`, `windspeed`  
-- **User Types:** `casual`, `registered`  
-- **Target Variable:** `cnt` — total rentals per day  
+The source `day.csv` is not currently listed in the repository, so a local copy is needed to reproduce the notebook from a fresh clone.
 
----
+## Workflow
 
-## ⚙️ Tools and Libraries Used
-- **Language:** Python  
-- **Libraries:** pandas, numpy, matplotlib, seaborn, scikit-learn, statsmodels  
+- Inspect data types, missing values and duplicates.
+- Explore distributions and relationships between demand and explanatory variables.
+- Encode categorical fields such as season and weather situation.
+- Fit a multiple linear regression model using scikit-learn and/or statsmodels.
+- Interpret coefficients and review multicollinearity using VIF.
+- Evaluate performance on held-out data and inspect regression assumptions.
 
----
+## Important modelling note
 
-## 🧹 Data Preparation
-- Imported and inspected dataset using pandas (`df.info()`, `df.head()`).  
-- Checked data types and null values.  
-- Converted categorical variables like `season` and `weathersit` into dummy variables.  
-- Explored correlations and feature relationships for modeling.
+The target `cnt` is the sum of `casual` and `registered` rentals. Those two component fields must not be used as predictors when the objective is to predict total rentals before the day occurs; doing so would create target leakage. Use only features that would genuinely be available at prediction time.
 
----
+The current README does not provide a verified final holdout score. No performance figure is claimed here.
 
-## 📈 Model Building
-- Implemented a **Multiple Linear Regression** model using scikit-learn and statsmodels.  
-- Calculated model coefficients to understand the impact of each predictor.  
-- Checked multicollinearity using **Variance Inflation Factor (VIF)**.  
+## Repository contents
 
----
+- `Untitled3.ipynb` — analysis notebook.
+- `Presentation.pdf` — project presentation.
+- `docs/PROJECT_GUIDE_AND_INTERVIEW_QUESTIONS.md` — explanation and interview preparation.
 
-## 🔍 Key Findings (from current analysis)
-- Dataset contains **730 observations** with **16 columns**.  
-- Preliminary analysis shows **temperature**, **season**, and **year** significantly affect total demand.  
-- Model coefficients indicate the relative influence of independent variables on total rentals.
+## Reproducibility
 
----
+Obtain the original `day.csv`, place it at the input path expected in the notebook or update the path, then run the notebook in a Python environment with the libraries listed above.
 
-## 📊 Next Steps
-- Perform residual analysis and validate model assumptions.  
-- Compute **R² score** and finalize model evaluation.  
-- Add visualizations for feature importance and residuals.
+## Interview preparation
 
----
+See [Project explanation and interview questions](docs/PROJECT_GUIDE_AND_INTERVIEW_QUESTIONS.md).
 
+## Author
 
-
-## 📁 Project Structure
--[Presentation.pdf](https://github.com/user-attachments/files/23291717/Presentation.pdf)
--[Untitled3.ipynb](https://github.com/user-attachments/files/23291719/Untitled3.ipynb)
-
-
-
----
-
-## 👨‍💻 Author
-**Eshwar Ramesh**  
-Data Analyst | Python & Machine Learning Enthusiast  
-📧 eshwarramesh1985@gmail.com  
-🌐 [https://github.com/yourusername](https://github.com/EshwarRamesh7)
-
-
+**Eshwar Ramesh** · [GitHub](https://github.com/EshwarRamesh7) · [Portfolio](https://eshwarrameshportfolio.netlify.app) · [LinkedIn](https://www.linkedin.com/in/eshwar-ramesh-9a4652251)
