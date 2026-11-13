@@ -33,15 +33,11 @@ The current README does not provide a verified final holdout score. No performan
 
 - `Untitled3.ipynb` — analysis notebook.
 - `Presentation.pdf` — project presentation.
-- `docs/PROJECT_GUIDE_AND_INTERVIEW_QUESTIONS.md` — explanation and interview preparation.
 
 ## Reproducibility
 
 Obtain the original `day.csv`, place it at the input path expected in the notebook or update the path, then run the notebook in a Python environment with the libraries listed above.
 
-## Interview preparation
-
-See [Project explanation and interview questions](docs/PROJECT_GUIDE_AND_INTERVIEW_QUESTIONS.md).
 
 ## Author
 
